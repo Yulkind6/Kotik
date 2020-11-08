@@ -1,94 +1,98 @@
+package yulkind;
+
 public class Kotik {
     public int fullness;
     public boolean eat() {
         fullness +=1;
-        System.out.print("I've eaten");
-        return True;
+        System.out.println("I've eaten");
+        return true;
     }
     public boolean play() {
         if(fullness <=0) {
-            System.out.print("I'm hungry");
-            return False;
+            System.out.println("I'm hungry");
+            return false;
         }
         else {
-            System.out.print("I've played");
-            return True;
+            System.out.println("I've played");
+            return true;
         }
     }
     public boolean sleep() {
         if(fullness <= 0) {
-            System.out.print("I'm hungry");
-            return False;
+            System.out.println("I'm hungry");
+            return false;
         }
         else {
-            System.out.print("I've slept");
-            return True;
+            System.out.println("I've slept");
+            return true;
         }
     }
     public boolean chaseMouse() {
         if(fullness <= 0) {
-            System.out.print("I'm hungry");
-            return False;
+            System.out.println("I'm hungry");
+            return false;
         }
         else {
-            System.out.print("I've caught a mouse");
-            return True;
+            System.out.println("I've caught a mouse");
+            return true;
         }
     }
     public boolean run() {
-        if(fullness <= 0) {
-            System.out.print("I'm hungry");
-            return False;
+        if (fullness <= 0) {
+            System.out.println("I'm hungry");
+            return false;
+        } else {
+            System.out.println("I've run");
+            return true;
         }
-        else {
-            System.out.print("I've run");
-            return True;
-        }
+    }
         public boolean jump() {
             if(fullness <= 0) {
-                System.out.print("I'm hungry");
-                return False;
+                System.out.println("I'm hungry");
+                return false;
+            }
         else {
-                    System.out.print("I've jumped");
-                    return True;
+                    System.out.println("I've jumped");
+                    return true;
                 }
             }
             public void liveAnotherDay() {
                 for(int i = 0; i < 24; i++) {
-                    int action = Math.random()*5 + 1;
+                    int action = (int)(Math.random()*5 + 1);
                     switch(action){
                         case 0:
-                            if (play() == False) {
+                            if (play() == false) {
                                 eat();
                             }
                             break;
                         case 1:
-                            if (sleep() == False) {
+                            if (!sleep()) {
                                 eat();
                             }
                             break;
                         case 2:
-                            if (chaseMouse() == False) {
+                            if (chaseMouse() == false) {
                                 eat();
                             }
                             break;
                         case 3:
-                            if (run () == False) {
+                            if (run () == false) {
                                 eat();
                             }
                             break;
                         case 4:
-                            if (run () == False) {
+                            if (run () == false) {
                                 eat();
                             }
                             break;
                         case 5:
-                            if (run () == False) {
+                            if (run () == false) {
                                 eat();
                             }
                             break;
                     }
+
                 }
+                fullness--;
             }
         }
-}
