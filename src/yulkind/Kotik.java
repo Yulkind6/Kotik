@@ -3,8 +3,15 @@ package yulkind;
 public class Kotik {
     public int fullness;
     public boolean eat() {
-        fullness +=1;
-        System.out.println("I've eaten");
+        return eat(4, "Buckwheat");
+    }
+    public boolean eat(int amount) {
+        fullness +=amount;
+        return true;
+    }
+    public boolean eat(int amount, String name) {
+        eat(amount);
+        System.out.println("I've eaten " + name);
         return true;
     }
     public boolean play() {
