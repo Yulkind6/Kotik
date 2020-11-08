@@ -68,7 +68,7 @@ public class Kotik {
                     int action = (int)(Math.random()*5 + 1);
                     switch(action){
                         case 0:
-                            if (play() == false) {
+                            if (!play()) {
                                 eat();
                             }
                             break;
@@ -78,22 +78,22 @@ public class Kotik {
                             }
                             break;
                         case 2:
-                            if (chaseMouse() == false) {
+                            if (!chaseMouse()) {
                                 eat();
                             }
                             break;
                         case 3:
-                            if (run () == false) {
+                            if (!run()) {
                                 eat();
                             }
                             break;
                         case 4:
-                            if (run () == false) {
+                            if (!run()) {
                                 eat();
                             }
                             break;
                         case 5:
-                            if (run () == false) {
+                            if (!run()) {
                                 eat();
                             }
                             break;
